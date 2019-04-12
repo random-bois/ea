@@ -1,0 +1,16 @@
+li.tight {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* navbar */
+.navbar-inverse {
+    background-color: #000000;
+    border-color: #000000;
+}
+
+.navbar-brand a{
+    color: #ffff00;
+}
+
+
