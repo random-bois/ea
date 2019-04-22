@@ -17,7 +17,7 @@ def fill_gender():
 
 
 def fill_data():
-    countries = ['Portugal', 'Germany', 'Spain', 'France', 'USA', 'China', 'Russia', 'Japan']
+    countries = ['Portugal', 'Germany', 'Spain', 'France', 'USA', 'China', 'Russia', 'Japan','Hong Kong']
     for country in countries:
         c = Country(name=country)
         try:
