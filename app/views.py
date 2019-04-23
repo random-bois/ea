@@ -141,9 +141,9 @@ class ShowTimePageView(BaseView):
         self.update_redirect()
         return self.render_template('moive.html', param1=param1)
 
-    @expose('/comeing_soon/')
+    @expose('/coming_soon/')
     def (self):
-        param1 = 'Comeing Soon'
+        param1 = 'Coming Soon'
         self.update_redirect()
         return self.render_template('movie.html', param1=param1)
 
@@ -161,7 +161,7 @@ appbuilder.add_link("Latest Posters ", href="/celebspageview/latest_posters/", c
 appbuilder.add_link("Celebrity News", href="/celebspageview/celebrity_news/", category="Celebs")
 appbuilder.add_view(ShowTimePageView, 'Opening This Week', category="")
 appbuilder.add_link("Now Playing", href="/ShowTimePageView/now_playing/", category="")
-appbuilder.add_link("Comeing Soon", href="/ShowTimePageViewShowTimePageView/comeing_soon/", category="")
+appbuilder.add_link("Coming Soon", href="/ShowTimePageViewShowTimePageView/comeing_soon/", category="")
 
 """ Custom Views """
 appbuilder.add_view(CelebsView, "Celebs", icon="fa-folder-open-o", category="Admin")
