@@ -113,7 +113,7 @@ class NewsCategory(Model):
     date = Column(Date, default=datetime.date.today(), nullable=True)
     description = Column(String(500), nullable=False)
     
-class Celebs Popularity(model):
+class CelebsPopularity(model):
     __tablename__ = 'celebs_popularity'
     id = Column(Integer, primary_key=True)
     name = Column(String(50), nullable=False)
@@ -129,7 +129,7 @@ class Movies(Model):
     director = Column(String(50), nullable=False)
     stars = Column(String(50), nullable=False)
    
-class Moive Genre(Model):
+class MoiveGenre(Model):
     __tablename__ = 'movie_genre'
     id = Column(Integer, primary_key=True)
     movie_id = Column(Integer, ForeignKey('movie.id'), nullable=False)
