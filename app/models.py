@@ -157,7 +157,7 @@ class Oscars(Model):
     name = Column (String(50), nullale=False)
     description = Column(String(500), nullable=False)
     
-class Golden Globes(Model):
+class GoldenGlobes(Model):
     id = Column(Integer, primary_key=True)
     name = Column (String(50), nullale=False)
     description = Column(String(500), nullable=False)
