@@ -106,62 +106,67 @@ class NewsCategory(Model):
     __tablename__ = 'news_category'
     id = Column(Integer, primary_key=True)
     name = Column(String(50), nullable=False)
-    class Celebs New(Model):
-    __tablename__ = 'celebs_new'
+
+
+class CelebsNews(Model):
+    __tablename__ = 'celebs_news'
     id = Column(Integer, primary_key=True)
-    title = Column(string(50), nullable=False)
+    title = Column(String(50), nullable=False)
     date = Column(Date, default=datetime.date.today(), nullable=True)
     description = Column(String(500), nullable=False)
-    
-class CelebsPopularity(model):
+
+
+class CelebsPopularity(Model):
     __tablename__ = 'celebs_popularity'
     id = Column(Integer, primary_key=True)
     name = Column(String(50), nullable=False)
     description = Column(String(500), nullable=False)
-    
 
 
 class Movies(Model):
     __tablename__ = 'movies'
     id = Column(Integer, primary_key=True)
     name = Column(String(50), nullable=False)
- 
+
     director = Column(String(50), nullable=False)
     stars = Column(String(50), nullable=False)
-   
+
+
 class MoiveGenre(Model):
     __tablename__ = 'movie_genre'
     id = Column(Integer, primary_key=True)
-    movie_id = Column(Integer, ForeignKey('movie.id'), nullable=False)
+    movie_id = Column(Integer, nullable=False)
     genre = Column(String(50), nullable=False)
     series = Column(String(50), nullable=False)
-    
+
+
 class Series(Model):
     id = Column(Integer, primary_key=True)
-    movie_id = Column(Integer, ForeignKey('movie.id'), nullable=False)
+    movie_id = Column(Integer,  nullable=False)
     name = Column(String(50), nullable=False)
     season = Column(Integer, nullable=False)
     number = Column(Integer, nullable=False)
-    
 
 
 class Event(Model):
     __tablename__ = 'event'
-    id = Column(integer, primary_key=True)
-    event = Column(Steing(50), nullable=False)
+    id = Column(Integer, primary_key=True)
+    event = Column(String(50), nullable=False)
     celebs_name = Column(String(50), nullable=False)
-    celebs_id = Column(Integer, ForeignKey('celebs.id'), nullable=False)
-    
+    celebs_id = Column(Integer,  nullable=False)
+
+
 class Oscars(Model):
     id = Column(Integer, primary_key=True)
-    name = Column (String(50), nullale=False)
+    name = Column(String(50), nullable=False)
     description = Column(String(500), nullable=False)
-    
+
+
 class GoldenGlobes(Model):
     id = Column(Integer, primary_key=True)
-    name = Column (String(50), nullale=False)
+    name = Column(String(50), nullable=False)
     description = Column(String(500), nullable=False)
-    
+
 
 class Photos(Model):
     __tablename__ = 'photos'
@@ -169,5 +174,4 @@ class Photos(Model):
     photos_name = Column(String(50), nullable=False)
     photots_year = Column(Integer, nullable=False)
     title = Column(String(50), nullable=False)
-    people= Column(String(50), ForeignKey(celebs.name), nullable=False)
-
+    people = Column(String(50), ForeignKey(Celebs.name), nullable=False)

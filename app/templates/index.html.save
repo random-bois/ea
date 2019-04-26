@@ -7,8 +7,8 @@ Event better you can develop your own widgets or templated and contribute to the
 
 <div class="jumbotron">
       <div class="container">
-        <h1>Flask App Builder</h1>
-        <p>{{_("Application Builder is a rapid application development framework. It was built with strong and detailed security on mind. Mobile, desktop and tablet integration. Our goal: inexpensive IT integration to your business needs")}}</p>
+        <h1>IMDB</h1>
+        <p>{{_(" IMDb (Internet Movie Database) is an online database of information related to films, television programs, home videos and video games, and internet streams, including cast, production crew and personnel biographies, plot summaries, trivia, and fan reviews and ratings.")}}</p>
         <p><a class="btn btn-primary btn-lg" role="button">{{_("Learn more")}} &raquo;</a></p>
       </div>
     </div>

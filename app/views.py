@@ -130,7 +130,7 @@ class ShowTimePageView(BaseView):
     default_view = 'opening_this_week'
 
     @expose('/opening_this_week/')
-    def (self):
+    def openings (self):
         param1 = 'Opening This Week'
         self.update_redirect()
         return self.render_template('moive.html', param1=param1)
@@ -142,7 +142,7 @@ class ShowTimePageView(BaseView):
         return self.render_template('moive.html', param1=param1)
 
     @expose('/coming_soon/')
-    def (self):
+    def comingsoon (self):
         param1 = 'Coming Soon'
         self.update_redirect()
         return self.render_template('movie.html', param1=param1)
@@ -159,9 +159,9 @@ appbuilder.add_link("Oscar Winner", href="/moviepageview/oscar_winner/", categor
 appbuilder.add_view(CelebsPageView, 'Born Today', category="Celebs")
 appbuilder.add_link("Latest Posters ", href="/celebspageview/latest_posters/", category="Celebs")
 appbuilder.add_link("Celebrity News", href="/celebspageview/celebrity_news/", category="Celebs")
-appbuilder.add_view(ShowTimePageView, 'Opening This Week', category="")
 appbuilder.add_link("Now Playing", href="/ShowTimePageView/now_playing/", category="")
-appbuilder.add_link("Coming Soon", href="/ShowTimePageViewShowTimePageView/comeing_soon/", category="")
+appbuilder.add_link("Coming Soon", href="/ShowTimePageViewShowTimePageView/coming_soon/", category="")
+
 
 """ Custom Views """
 appbuilder.add_view(CelebsView, "Celebs", icon="fa-folder-open-o", category="Admin")
