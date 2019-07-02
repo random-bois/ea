@@ -1,7 +1,7 @@
 apiVersion: extensions/v1beta1
  kind: Deployment
  metadata:
-   name: rss-site
+   name: ea-app
  spec:
    replicas: 2
    template:
