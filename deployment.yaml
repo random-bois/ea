@@ -13,4 +13,4 @@ apiVersion: extensions/v1beta1
             - name: ea-app
              image: rahman123456/eaproject11:random12
              ports:
-                 - containerPort: 88
+                 - containerPort: 80
