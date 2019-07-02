@@ -7,10 +7,7 @@ metadata:
 spec:
  containers:
    – name: front-end
-     image: nginx
-     ports:
-       – containerPort: 80
-   – name: rss-reader
      image: rahman123456/eaporject11:random12
      ports:
-       – containerPort: 88
+       – containerPort: 80
+ 
