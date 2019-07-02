@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+ kind: Deployment
+ metadata:
+   name: rss-site
+ spec:
+   replicas: 2
+   template:
+     metadata:
+       labels:
+         app: web
+     spec:
+       containers:
+            - name: ea-app
+             image: rahman123456/eaproject11:random12
+             ports:
+                 - containerPort: 88
